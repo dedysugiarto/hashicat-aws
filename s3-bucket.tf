@@ -6,7 +6,6 @@ module "s3_bucket" {
   acl    = "private"
 
   bucket_prefix = var.prefix
-  acl = "private"
 
   versioning = {
     enabled = true
