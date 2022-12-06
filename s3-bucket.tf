@@ -1,11 +1,10 @@
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-  version = "2.8.0"
+module "s3-bucket" {
+  source  = "app.terraform.io/example-org-67755a/s3-bucket/aws"
+  version = "3.6.0"
 
-  bucket = "my-s3-buckets"
-  acl    = "private"
 
   bucket_prefix = var.prefix
+  acl    = "private"
 
   versioning = {
     enabled = true
